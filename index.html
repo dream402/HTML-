@@ -1,58 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="kk">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DREAM SMP</title>
+
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
 body{
-background:#111827;
+background:linear-gradient(180deg,#000814,#001d3d);
 color:white;
-font-family:Arial;
 text-align:center;
-padding:30px;
 }
+
+header{
+padding:50px 20px;
+}
+
 h1{
-color:#4ade80;
-font-size:50px;
+font-size:55px;
+color:#39ff14;
+text-shadow:0 0 20px #39ff14;
 }
+
+.subtitle{
+color:#ccc;
+margin-top:10px;
+font-size:18px;
+}
+
+.container{
+width:90%;
+max-width:1000px;
+margin:auto;
+}
+
 .card{
-background:#1f2937;
-padding:20px;
-margin:20px;
-border-radius:15px;
-border:2px solid #4ade80;
+background:rgba(0,0,0,.5);
+border:2px solid #39ff14;
+border-radius:20px;
+padding:25px;
+margin:20px 0;
+box-shadow:0 0 15px rgba(57,255,20,.3);
 }
-button{
-background:#4ade80;
+
+.card h2{
+margin-bottom:15px;
+color:#39ff14;
+}
+
+.btn{
+background:#39ff14;
 border:none;
 padding:12px 25px;
-border-radius:10px;
+border-radius:12px;
 font-size:18px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+margin:20px 0;
+}
+
+.stat{
+background:rgba(255,255,255,.05);
+padding:20px;
+border-radius:15px;
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+background:black;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+border:2px solid #39ff14;
 }
 </style>
 </head>
+
 <body>
 
+<header>
 <h1>⛏ DREAM SMP ⛏</h1>
+<p class="subtitle">
+Қазақстандағы ең керемет Minecraft Survival сервері
+</p>
+</header>
+
+<div class="container">
 
 <div class="card">
 <h2>📡 Сервер IP</h2>
-<p>kaussik157.aternos.me</p>
-<button onclick="alert('IP: kaussik157.aternos.me')">
+<p id="ip">kaussik157.aternos.me</p>
+<br>
+<button class="btn" onclick="copyIP()">
 📋 IP Көшіру
 </button>
 </div>
 
-<div class="card">
+<div class="stats">
+
+<div class="stat">
+<h2>👥 Онлайн</h2>
+<p>25 ойыншы</p>
+</div>
+
+<div class="stat">
 <h2>🎮 Версия</h2>
 <p>1.21.1+</p>
 </div>
 
+<div class="stat">
+<h2>🟢 Статус</h2>
+<p>ONLINE</p>
+</div>
+
+</div>
+
 <div class="card">
 <h2>📜 Ережелер</h2>
-<p>❌ Чит жоқ</p>
-<p>❌ Гриферлік жоқ</p>
-<p>✅ Барлығын құрметте</p>
+<p>❌ Чит қолдануға болмайды</p><br>
+<p>❌ Гриферлік жасауға болмайды</p><br>
+<p>✅ Барлығын құрметте</p><br>
+<p>✅ Достарыңмен ойна</p>
 </div>
+
+<div class="card">
+<h2>💎 Донат</h2>
+<p>VIP — 500₸</p>
+<p>MVP — 1000₸</p>
+<p>LEGEND — 2000₸</p>
+<br>
+<button class="btn">💰 Донат алу</button>
+</div>
+
+<div class="card">
+<h2>📷 Галерея</h2>
+
+<div class="gallery">
+
+<img src="https://picsum.photos/500/300?1">
+
+<img src="https://picsum.photos/500/300?2">
+
+<img src="https://picsum.photos/500/300?3">
+
+</div>
+
+</div>
+
+<div class="card">
+<h2>🏆 DREAM SMP</h2>
+
+<p>
+Үйлер сал, достар тап, PvP жаса,
+ресурстар жина және өз аңызыңды құр!
+</p>
+
+</div>
+
+</div>
+
+<footer>
+🔥 DREAM SMP 2026 🔥
+</footer>
+
+<script>
+function copyIP(){
+navigator.clipboard.writeText(
+"kaussik157.aternos.me"
+);
+alert("IP көшірілді!");
+}
+</script>
 
 </body>
 </html>
