@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070b16">
+<title>ACTION BOXING — техника және жаттығу</title>
+<style>
+:root{--bg:#070b16;--panel:#101b30;--line:#293e5e;--blue:#249fff;--cyan:#6be7ff;--white:#f4f8ff;--muted:#a5b3c9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0,#164a79,transparent 36%),var(--bg);color:var(--white);font-family:Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#070b16ed;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{max-width:1100px;margin:auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}.logo{font-weight:1000;letter-spacing:2px}.logo span{color:var(--cyan)}nav{display:flex;gap:15px;flex-wrap:wrap}nav a{font-size:12px;color:var(--muted);text-decoration:none;font-weight:bold}nav a:hover{color:var(--cyan)}
+main{max-width:1100px;margin:auto;padding:25px 20px 60px}
+.hero{padding:clamp(28px,5vw,55px);min-height:315px;border:1px solid #28547e;border-radius:24px;background:linear-gradient(110deg,#10192c,#103052 65%,#075e91);position:relative;overflow:hidden}.hero:after{content:"BOX";position:absolute;right:-10px;bottom:-48px;font-size:clamp(120px,25vw,260px);font-weight:1000;color:#c4efff0c}.hero>div{position:relative;z-index:1;max-width:630px}.eyebrow,.kicker{color:var(--cyan);font-size:11px;font-weight:900;letter-spacing:2px}.hero h1{font-size:clamp(44px,8vw,76px);line-height:.92;margin:17px 0}.hero h1 span{color:var(--cyan)}.hero p{color:#c5d5e9;line-height:1.65}.btn{display:inline-block;background:var(--blue);color:#06111e;padding:13px 18px;border-radius:9px;text-decoration:none;font-weight:900;margin-top:10px}
+.section{margin-top:38px}.head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:15px}.head h2{margin:0;font-size:24px}.head p{margin:0;color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:18px}.card h3{margin:8px 0;font-size:20px}.card p,.card li{font-size:13px;line-height:1.7;color:#d2deef}.muted{color:var(--muted)!important;font-size:12px!important}
+.diagram{background:linear-gradient(145deg,#0b1527,#122642);border:1px solid #2b4567;border-radius:13px;padding:10px;margin:12px 0}.diagram svg{display:block;width:100%;height:auto;max-height:245px}.legend{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;background:var(--cyan)}.dot.orange{background:#ffb35c}
+.note{background:#0b1425;border:1px solid var(--line);border-radius:12px;padding:12px;color:#cbd9eb;font-size:13px;line-height:1.6}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}.day{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:12px 9px;min-height:112px}.day b{font-size:12px}.day p{font-size:11px;line-height:1.45;color:var(--muted);min-height:30px}.tag{font-size:10px;font-weight:bold;color:var(--cyan);background:#123d60;border-radius:20px;padding:5px 7px}.rest{color:#c2cddd;background:#2a3549}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:17px}.stat{padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.stat strong{display:block;font-size:26px;color:var(--cyan)}.stat small{color:var(--muted)}.bar{height:8px;background:#263650;border-radius:20px;margin-top:10px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:.2s}
+.card button{background:#15395a;color:#e6f8ff;border:1px solid #2b6b9c;border-radius:8px;padding:10px;margin:5px 5px 0 0;font-weight:bold;cursor:pointer}.card button.done{background:#164536;border-color:#38896d}
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.tip{padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.tip b{color:var(--cyan)}.tip p{font-size:13px;line-height:1.55;color:#c5d1e2;margin-bottom:0}
+.safety{background:#10213a;border:1px solid #315577;border-radius:14px;padding:17px;color:#d0dced;font-size:13px;line-height:1.7}.safety b{color:var(--cyan)}
+footer{text-align:center;color:#71839e;padding:28px;font-size:12px;border-top:1px solid var(--line)}
+@media(max-width:800px){.week{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.tips{grid-template-columns:1fr 1fr}}
+@media(max-width:450px){nav{gap:8px}nav a{font-size:10px}.stats{grid-template-columns:1fr 1fr}.stat:last-child{grid-column:span 2}.head{display:block}.head p{margin-top:7px}.tips{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">ACTION<span>BOXING</span></div><nav><a href="#schedule">КЕСТЕ</a><a href="#technique">ТЕХНИКА</a><a href="#training">ЖАТТЫҒУ</a><a href="#progress">ПРОГРЕСС</a></nav></div></header>
+<main>
+<section class="hero"><div><div class="eyebrow">BEGINNER BOXING · WEEK PLAN</div><h1>MOVE<br><span>WITH CONTROL.</span></h1><p>Боксқа арналған бастауыш бағдарлама: аяқ жұмысы, тепе-теңдік, қорғаныс қалпы және жеңіл көлеңкелі қозғалыс. Барлығы асықпай, қауіпсіз орындалады.</p><a class="btn" href="#technique">ТЕХНИКАНЫ КӨРУ ↓</a></div></section>
+
+<section class="stats" id="progress"><div class="stat"><strong id="count">0 / 3</strong><small>Орындалған сабақ</small></div><div class="stat"><strong id="pct">0%</strong><small>Апталық прогресс</small></div><div class="stat"><strong>20 мин</strong><small>Орташа сабақ ұзақтығы</small></div></section><div class="bar"><div class="fill" id="fill"></div></div>
+
+<section class="section" id="technique"><div class="head"><h2>01 / ТЕХНИКАНЫ СУРЕТПЕН ҮЙРЕН</h2><p>Сызбалар — қозғалысты түсінуге арналған</p></div>
+<div class="grid">
+<article class="card"><div class="kicker">FOOTWORK · 01</div><h3>Аяқтың алға-артқа қозғалысы</h3><p class="muted">Қадамды қысқа жаса, аяқты айқастырма.</p>
+<div class="diagram"><svg viewBox="0 0 520 235" role="img" aria-label="Аяқтың алға және артқа қозғалыс сызбасы">
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="#6be7ff"/></marker></defs>
+<rect x="8" y="8" width="504" height="219" rx="12" fill="#0b1729"/><path d="M50 178 H470" stroke="#405775" stroke-width="2" stroke-dasharray="5 7"/>
+<g fill="#6be7ff"><ellipse cx="190" cy="111" rx="22" ry="10" transform="rotate(-12 190 111)"/><ellipse cx="250" cy="145" rx="22" ry="10" transform="rotate(-12 250 145)"/></g>
+<g fill="#ffb35c"><ellipse cx="285" cy="111" rx="22" ry="10" transform="rotate(-12 285 111)"/><ellipse cx="345" cy="145" rx="22" ry="10" transform="rotate(-12 345 145)"/></g>
+<path d="M155 65 H300" stroke="#6be7ff" stroke-width="4" marker-end="url(#arr)"/><path d="M360 190 H220" stroke="#ffb35c" stroke-width="4" marker-end="url(#arr)"/>
+<text x="30" y="35" fill="#f4f8ff" font-size="15" font-weight="bold">АЛҒА</text><text x="390" y="35" fill="#f4f8ff" font-size="15" font-weight="bold">��РТҚА</text><text x="28" y="211" fill="#9fb2cc" font-size="12">Сызба: қысқа қадам, аяқтар айқаспайды</text></svg><div class="legend"><span><i class="dot"></i>Бастапқы орын</span><span><i class="dot orange"></i>Қадамнан кейін</span></div></div>
+<ol><li>Тізені сәл бос ұста.</li><li>Алға жүргенде алдыңғы аяқ бірінші қозғалады.</li><li>Артқы аяқ арақашықтықты сақтап ілеседі.</li><li>Артқа жүргенде реті керісінше.</li></ol>
+<div class="note">Мақсат — тепе-теңдікті жоғалтпау. Аяқты бір-бірінің үстінен айқастырма.</div></article>
+
+<article class="card"><div class="kicker">FOOTWORK · 02</div><h3>Оңға және солға қадам</h3><p class="muted">Бір жаққа қадам жасап, екінші аяқпен арақашықтықты сақта.</p>
+<div class="diagram"><svg viewBox="0 0 520 235" role="img" aria-label="Бүйірге қадам қозғалысының сызбасы"><defs><marker id="arr2" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="#6be7ff"/></marker></defs><rect x="8" y="8" width="504" height="219" rx="12" fill="#0b1729"/><path d="M45 175 H475" stroke="#405775" stroke-width="2" stroke-dasharray="5 7"/><g fill="#6be7ff"><ellipse cx="190" cy="115" rx="22" ry="10"/><ellipse cx="250" cy="150" rx="22" ry="10"/></g><g fill="#ffb35c"><ellipse cx="310" cy="115" rx="22" ry="10"/><ellipse cx="370" cy="150" rx="22" ry="10"/></g><path d="M145 65 H360" stroke="#6be7ff" stroke-width="4" marker-end="url(#arr2)"/><path d="M375 195 H160" stroke="#ffb35c" stroke-width="4" marker-end="url(#arr2)"/><text x="28" y="35" fill="#f4f8ff" font-size="15" font-weight="bold">ОҢҒА →</text><text x="360" y="35" fill="#f4f8ff" font-size="15" font-weight="bold">← СОЛҒА</text><text x="28" y="211" fill="#9fb2cc" font-size="12">Бір аяқ қадам жасайды, екіншісі ілеседі</text></svg></div>
+<ol><li>Алдымен баратын жақтағы аяқ қозғалады.</li><li>Екінші аяқ соңынан жай ілеседі.</li><li>Аяқтарды айқастырма.</li><li>Екі жаққа да 20–30 секунд баяу қайтала.</li></ol>
+<div class="note">Таймайтын тегіс жерде жаса. Тез бұрылуға немесе секіруге асықпа.</div></article>
+
+<article class="card"><div class="kicker">GUARD · 03</div><h3>Қорғаныс қалпы және қолдың орны</h3><p class="muted">Қолды қауіпсіз, ыңғайлы қалыпта ұстауды үйрен.</p>
+<div class="diagram"><svg viewBox="0 0 520 260" role="img" aria-label="Қорғаныс қалпындағы адамның қарапайым сызбасы"><rect x="8" y="8" width="504" height="244" rx="12" fill="#0b1729"/><circle cx="260" cy="65" r="27" fill="#ffcc9b"/><path d="M231 60 Q260 22 289 60" fill="none" stroke="#6be7ff" stroke-width="9" stroke-linecap="round"/><path d="M220 104 Q260 87 300 104 L315 177 L205 177 Z" fill="#1e83c6" stroke="#6be7ff" stroke-width="3"/><path d="M220 112 L188 75 L168 91 L209 145" fill="none" stroke="#ffcc9b" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><path d="M300 112 L332 75 L352 91 L311 145" fill="none" stroke="#ffcc9b" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><path d="M188 75 L180 58 M332 75 L340 58" stroke="#6be7ff" stroke-width="7" stroke-linecap="round"/><path d="M238 177 L225 225 M282 177 L295 225" stroke="#d7e5f7" stroke-width="20" stroke-linecap="round"/><path d="M145 58 L175 68 M375 58 L345 68" stroke="#6be7ff" stroke-width="2"/><text x="22" y="42" fill="#6be7ff" font-size="13">ҚОЛДАР БЕТ МАҢЫНДА</text><text x="355" y="42" fill="#6be7ff" font-size="13">ИЫҚ БОС</text><text x="25" y="235" fill="#9fb2cc" font-size="12">Жайлы тұрыс, мойын мен иықты қыспа</text></svg></div>
+<ol><li>Қолды бет маңында ыңғайлы ұста.</li><li>Шынтақты денеге жақын ұстауға тырыс.</li><li>Иықты құлаққа қарай көтеріп қыспа.</li><li>Тынысты бірқалыпты ал.</li></ol>
+<div class="note">Бұл — қорғаныс қалпының жалпы сызбасы. Қолмен соққы жасау техникасын жаттықтырушыдан үйрен.</div></article>
+
+<article class="card"><div class="kicker">BALANCE · 04</div><h3>Тепе-теңдік пен дайын тұрыс</h3><p class="muted">Денеңді тұрақты ұстап, салмақты екі аяққа жай бөл.</p>
+<div class="diagram"><svg viewBox="0 0 520 235" role="img" aria-label="Тепе-теңдік пен аяқ арақашықтығы сызбасы"><rect x="8" y="8" width="504" height="219" rx="12" fill="#0b1729"/><path d="M260 32 V195" stroke="#6be7ff" stroke-dasharray="5 6" stroke-width="2"/><path d="M150 175 Q260 195 370 175" fill="none" stroke="#405775" stroke-width="2"/><ellipse cx="205" cy="140" rx="38" ry="16" fill="#6be7ff" transform="rotate(-15 205 140)"/><ellipse cx="315" cy="140" rx="38" ry="16" fill="#ffb35c" transform="rotate(-15 315 140)"/><path d="M205 75 V115 M315 75 V115" stroke="#f4f8ff" stroke-width="2"/><path d="M205 75 L315 75" stroke="#6be7ff" stroke-width="3"/><text x="225" y="58" fill="#6be7ff" font-size="14">ТҰРАҚТЫ АРАЛЫҚ</text><text x="25" y="211" fill="#9fb2cc" font-size="12">Аяқтар ыңғайлы арақашықтықта</text></svg></div>
+<ol><li>Аяқты тым жақын қойма.</li><li>Тізені сәл бос ұста.</li><li>Салмақты жайлы сезілетіндей бөл.</li><li>Қозғалыстан кейін тепе-теңдікті қайта тап.</li></ol>
+<div class="note">Егер тобық немесе тізе жайсызданса, тоқтап демал.</div></article>
+</div></section>
+
+<section class="section" id="schedule"><div class="head"><h2>02 / АПТАЛЫҚ КЕСТЕ</h2><p>Аптасына үш негізгі сабақ</p></div><div class="week">
+<div class="day"><b>ДҮЙСЕНБІ</b><p>Тұрыс + аяқ жұмысы</p><span class="tag">TRAIN</span></div><div class="day"><b>СЕЙСЕНБІ</b><p>Демалыс, жай серуен</p><span class="tag rest">REST</span></div><div class="day"><b>СӘРСЕНБІ</b><p>Қорғаныс қалпы + көлеңкелі қозғалыс</p><span class="tag">TRAIN</span></div><div class="day"><b>БЕЙСЕНБІ</b><p>Демалыс</p><span class="tag rest">REST</span></div><div class="day"><b>ЖҰМА</b><p>Жалпы дене дайындығы</p><span class="tag">TRAIN</span></div><div class="day"><b>СЕНБІ</b><p>Жеңіл серуен</p><span class="tag rest">REST</span></div><div class="day"><b>ЖЕКСЕНБІ</b><p>Толық демалыс</p><span class="tag rest">REST</span></div>
+</div></section>
+
+<section class="section" id="training"><div class="head"><h2>03 / ЖАТТЫҒУ КҮНДЕРІ</h2><p>Әр сабақта қыздырыну және соңында баяу аяқтау</p></div><div class="grid">
+<article class="card"><div class="kicker">MONDAY · 20 MIN</div><h3>🥊 Аяқ жұмысы</h3><ol><li>Орнында жүру — 2 мин</li><li>Иық пен қолды айналдыру — 1 мин</li><li>Алға-артқа қадам — 3 × 30 сек</li><li>Оңға-солға қадам — 3 × 30 сек</li><li>Тепе-теңдік сақтау — 3 × 20 сек</li><li>Жай жүру, созылу — 4 мин</li></ol><button data-d="1" onclick="mark(1)">✓ Орындалды</button></article>
+<article class="card"><div class="kicker">WEDNESDAY · 20 MIN</div><h3>⚡ Қорғаныс және қозғалыс</h3><ol><li>Жай қыздырыну — 4 мин</li><li>Қорғаныс қалпын ұстау — 3 × 20 сек</li><li>Алға-артқа жай қозғалу — 2 × 30 сек</li><li>Бүйірге қадам — 2 × 30 сек</li><li>Айна алдында соққысыз көлеңкелі қозғалыс — 3 × 30 сек</li><li>Баяу жүру, созылу — 4 мин</li></ol><button data-d="2" onclick="mark(2)">✓ Орындалды</button></article>
+<article class="card"><div class="kicker">FRIDAY · 20 MIN</div><h3>💪 Жалпы дене дайындығы</h3><ol><li>Жай қыздырыну — 4 мин</li><li>Орындыққа отырып-тұру — 6–8 рет</li><li>Қабырғаға сүйеніп итерілу — 6–8 рет</li><li>Өкшені көтеру — 8–10 рет</li><li>Қарама-қарсы қол мен аяқты созу — әр жаққа 4 рет</li><li>Жай жүру, созылу — 4 мин</li></ol><button data-d="3" onclick="mark(3)">✓ Орындалды</button></article>
+<article class="card"><div class="kicker">REMINDER</div><h3>Демалыс та маңызды</h3><p>Сейсенбі, бейсенбі, сенбі және жексенбі — демалыс немесе жай серуен. Қосымша ауыр жаттығу қоспа. Қалып қойған күнді екі есе орындап толтырма.</p></article>
+</div></section>
+<section class="section"><div class="safety"><b>ҚАУІПСІЗДІК:</b> Бұл сайт соққы жасауға үйретпейді: қолмен ұру техникасын, нысанаға соғуды немесе спаррингті жаттықтырушы бақылауымен ғана үйрен. Үйдегі бағдарламада аяқ жұмысы, қорғаныс қалпы және соққысыз қозғалыс қана бар. Қатты ауырсыну, бас айналу немесе тыныс алу қиындаса, бірден тоқтап, ересек адамға айт. Бос, таймайтын жерде жаттық; қыздырынуды ұмытпа.</div></section>
+</main><footer>ACTION BOXING · LEARN THE BASICS · MOVE SAFELY</footer>
+<script>
+const done=new Set();function update(){let n=done.size;document.getElementById('count').textContent=n+' / 3';document.getElementById('pct').textContent=Math.round(n/3*100)+'%';document.getElementById('fill').style.width=(n/3*100)+'%'}function mark(n){let b=document.querySelector('[data-d="'+n+'"]');if(done.has(n)){done.delete(n);b.classList.remove('done');b.textContent='✓ Орындалды'}else{done.add(n);b.classList.add('done');b.textContent='✓ Белгіленді'}update()}
+</script></body></html>
